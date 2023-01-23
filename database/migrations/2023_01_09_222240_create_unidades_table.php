@@ -37,7 +37,7 @@ class CreateUnidadesTable extends Migration
         //antes de dropar a tabela, excluir os relacionamentos, garantindo a integridade referencial
         Schema::table('produto_detalhes', function(Blueprint $table) {
             //remover primeiro a constraint foreign key, após isso remover a coluna
-            $table->dropForeign('produtos_detalhes_unidade_id_foreign');//[table]_[coluna]_foreign
+            $table->dropForeign('produto_detalhes_unidade_id_foreign');//[table]_[coluna]_foreign
             $table->dropColumn('unidade_id');
         });
         
